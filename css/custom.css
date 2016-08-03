@@ -420,11 +420,12 @@ footer.footer .footer-copyright p {
 }
 
 .imprintLink {
-  right: 0;
   top: 0;
   color: white;
   text-decoration: underline;
   cursor: pointer;
+  left: 100%;
+  position: relative;
 }
 
 #contact {
@@ -537,15 +538,12 @@ footer.footer .footer-copyright p {
   padding: 0 20px;
 }
 
-@media all and (max-height: 400px){
-  .iframe {
-    height: 500px;
-  }
-
-}
 @media all and (max-width: 450px){
   .wrapper {
     padding: 0 0;
+  }
+  .iframe iframe {
+    height: 450px;
   }
 }
 

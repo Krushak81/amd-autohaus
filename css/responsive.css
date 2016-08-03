@@ -189,6 +189,11 @@
 }
 
 @media (max-width: 582px) {
+
+.our-services {
+	padding: 50px 0 50px;
+}
+
 .imprintLink {
 	left: 0;
 }

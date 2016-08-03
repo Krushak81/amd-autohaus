@@ -42,7 +42,17 @@ gulp.task("javascript", function() {
 gulp.task("styles", function() {
 
   var src = gulp.src([
-                       "css/*.css"
+      "css/animate.css",
+      "css/bootstrap.css",
+      "css/settings.css",
+      "css/custom.css",
+      "css/flexslider.css",
+      "css/font-awesome.css",
+      "css/fullwidth.css",
+      "css/jquery.bxslider.css",
+      "css/jquery.fancybox-1.3.4.css",
+      "css/style.css",
+      "css/responsive.css"
                      ]);
 
   return src
