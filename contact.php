@@ -3,10 +3,10 @@
 	/* ==========================  Define variables ========================== */
 
 	#Your e-mail address
-	define("__TO__", "test@gmail.com");
+	define("__TO__", "info@amd-autohaus.de");
 
 	#Message subject
-	define("__SUBJECT__", "");
+	define("__SUBJECT__", "AMD-AUTOHAUS KONTAKTANFRAGE");
 
 	#Success message
 	define('__SUCCESS_MESSAGE__', "Your message has been sent. Thank you!");
@@ -65,11 +65,11 @@
 			<body>
 			  <table class="table">
 				<tr>
-				  <th align="right">Name:</th>
+				  <th align="right">Absender Name:</th>
 				  <td align="left">'. $name .'</td>
 				</tr>
 				<tr>
-				  <th align="right">E-mail:</th>
+				  <th align="right">Absender E-mail:</th>
 				  <td align="left">'. $mail .'</td>
 				</tr>
 				<tr>
@@ -77,7 +77,7 @@
 				  <td align="left">'. $subject .'</td>
 				</tr>
 				<tr>
-				  <th align="right">Comment:</th>
+				  <th align="right">Nachricht:</th>
 				  <td align="left">'. $comment .'</td>
 				</tr>
 			  </table>

@@ -42,7 +42,17 @@ gulp.task("javascript", function() {
 gulp.task("styles", function() {
 
   var src = gulp.src([
-                       "css/*.css"
+      "css/animate.css",
+      "css/bootstrap.css",
+      "css/settings.css",
+      "css/custom.css",
+      "css/flexslider.css",
+      "css/font-awesome.css",
+      "css/fullwidth.css",
+      "css/jquery.bxslider.css",
+      "css/jquery.fancybox-1.3.4.css",
+      "css/style.css",
+      "css/responsive.css"
                      ]);
 
   return src
@@ -72,8 +82,7 @@ gulp.task("html", function() {
     ]);
 
     return src
-        .pipe(gulp.dest("dist/"))
-        ;
+        .pipe(gulp.dest("dist/"));
 });
 
 gulp.task("images", function() {
@@ -112,6 +121,17 @@ gulp.task("assets", function() {
 
 });
 
+gulp.task("php", function() {
+
+    var src = gulp.src([
+        "./*.php"
+    ]);
+
+    return src
+        .pipe(gulp.dest("dist/"));
+
+});
+
 gulp.task("watch", function() {
   gulp.watch("js/**/*", ["javascript"]);
   gulp.watch("css/**/*", ["styles"]);
@@ -120,7 +140,7 @@ gulp.task("watch", function() {
 
 // Browser Sync
 
-gulp.task("serve", ["javascript", "styles", "fonts" , "html", "images", "css-images", "assets"], function() {
+gulp.task("serve", ["javascript", "styles", "fonts" , "html", "php", "images", "css-images", "assets"], function() {
 
     bs.init({
         server: {
@@ -135,9 +155,11 @@ gulp.task("serve", ["javascript", "styles", "fonts" , "html", "images", "css-ima
 
     gulp.watch(basepath + "images/**/*", ["images", bs.reload]);
 
-    gulp.watch(basepath + "index.html", ["html", bs.reload]);
-    
+    gulp.watch(basepath + "**/*.html", ["html", bs.reload]);
+
+    gulp.watch(basepath + "**/*.php", ["php", bs.reload]);
+
 
 });
 
-gulp.task("prototype", ["javascript", "styles", "fonts" , "html" , "images", "css-images", "assets"], function() {});
+gulp.task("prototype", ["javascript", "styles", "fonts" , "html" , "php", "images", "css-images", "assets"], function() {});
